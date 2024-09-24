@@ -1,14 +1,22 @@
 ---
-title: "[Insert title]"
-author: "[Insert name]"
-toc-title: "Contents"
+title: "Coastal Ecosystem Accounting in the Main Hawaiian Islands"
+subtitle: "
+Quarto is a powerful tool that transforms R or Python code into beautifully clean reports.
+<br/>
+`Lumo` is a __custom format__ for Quarto, enhancing the default appearance to make it even more polished and aligned with your brand.
+<br/>
+This document showcases how a lumo-styled document looks.
+"
+format:
+  lumo-html: 
+    logo: "/assets/logos/uhm_logo.png"                             # Optional. Path to a logo displayed above the title
+    github-repo: "https://github.com/olesonlab/cea"        # Optional. Adds a github corner at the top right
+    primary-color: "black"
+    self-contained: true
+    is-particlejs-enabled: true                  # Optional: display interactive particles in the document header
+author: Alemarie Ceria
 date: last-modified
-date-format: long
-format: html
-code-annotations: hover
-code-overflow: wrap
 ---
-
 This is a Quarto website. The following is an example of how you can format it.
 
 ## Dependencies
@@ -39,7 +47,7 @@ glimpse(mtcars)
 summary(mtcars)
 ```
 
-::: {.panel-tabset}
+::: {.panel-tabset .nav-pills}
 
 ### Table
 

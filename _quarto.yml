@@ -6,18 +6,25 @@ project:
     browser: true
 
 website:
-  title: "[Insert title of website]"
+  title: "<b>CEA</b>"
   back-to-top-navigation: true
   search: true
-  navbar:
+  navbar: 
+    background: white
+    search: true
     left:
-      - href: index.qmd
-        text: Home
-      - href: add_page.qmd
-        text: Additional Page
-  page-footer: |
-    ![](/assets/logos/uhm-logo.png){width=30%}
-    <br><br>
+      - text: "Home"
+        href: index.qmd
+      - text: "Extents and Conditions"
+        menu:
+          - storymap.qmd
+          - dashboard.qmd
+      - text: "Services"
+        menu:
+          - fisheries.qmd
+  # page-footer: |
+  #   ![](/assets/logos/uhm-logo.png){width=30%}
+  #   <br><br>
         
 format:
   html:
