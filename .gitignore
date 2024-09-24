@@ -3,3 +3,5 @@
 .Rprofile
 _site/
 _freeze/
+
+data/
