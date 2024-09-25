@@ -73,7 +73,7 @@ ul > li {
   background-color: var(--primary-color);
 }
 .nav-pills .nav-link {
-  padding: 5px;
+  padding: 10px;
   margin-right: 4px;
 }
 ul.nav.nav-tabs {
@@ -91,6 +91,12 @@ ul.nav.nav-tabs {
 .sidebar nav[role="doc-toc"] ul > li > ul > li > a.active {
   border-left: 1px solid var(--primary-color);
   color: var(--primary-color) !important;
+  font-weight: bold;
+}
+/* Hover effect for TOC links */
+.sidebar nav[role="doc-toc"] ul > li > a:hover,
+.sidebar nav[role="doc-toc"] ul > li > ul > li > a:hover {
+  color: #D4AF37 !important; /* Change hover color to #095537 */
 }
 #TOC {
   top: 50%;
@@ -121,7 +127,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: right;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -155,4 +161,27 @@ button {
   padding-bottom: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+/* ---------------------------Side-bar scollbar----------------------------- */
+
+/* Target the scrollbar of the sidebar navigation */
+#quarto-sidebar::-webkit-scrollbar {
+    width: 1px; /* Adjust the width of the scrollbar */
+}
+
+/* Style the scrollbar track */
+#quarto-sidebar::-webkit-scrollbar-track {
+    background: transparent; /* Make the scrollbar track transparent */
+}
+
+/* Style the scrollbar handle */
+#quarto-sidebar::-webkit-scrollbar-thumb {
+    background: transparent; /* Adjust the transparency of the scrollbar handle */
+    border-radius: 4px; /* Optional: round the scrollbar edges */
+}
+
+/* Optional: Style the scrollbar handle when hovered */
+#quarto-sidebar::-webkit-scrollbar-thumb:hover {
+    background: transparent; /* Slightly darker on hover */
 }

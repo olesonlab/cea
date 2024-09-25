@@ -47,7 +47,8 @@ cran_packages <- c(
   "plotly", "DT", "gt", "patchwork", "wesanderson", "ggtext", "ggiraph", 
   "rmarkdown", "leaflet", "leaflet.esri", "shiny", "gridExtra", "ggthemes",
   "mapview", "gganimate", "magick", "gifski", "ggrepel",
-  "terra", "units", "rmapshaper"
+  "terra", "sf", "units", "rmapshaper",
+  "hrbrthemes", "viridis"
 )
 
 # github_packages <- c()  # Uncomment and add GitHub packages if needed
@@ -56,5 +57,3 @@ install_packages_and_load_libraries(
   cran_packages = cran_packages
   # github_packages = github_packages
 )
-
-install.packages("sf", dependencies = TRUE)

@@ -1,93 +1,167 @@
 ---
 title: "Coastal Ecosystem Accounting in the Main Hawaiian Islands"
-subtitle: "
-Quarto is a powerful tool that transforms R or Python code into beautifully clean reports.
-<br/>
-`Lumo` is a __custom format__ for Quarto, enhancing the default appearance to make it even more polished and aligned with your brand.
-<br/>
-This document showcases how a lumo-styled document looks.
-"
+subtitle: "Lorem ipsum odor amet, consectetuer adipiscing elit. Erat suspendisse proin massa eu suspendisse purus velit. Interdum finibus porttitor litora et facilisi cras. Pretium vel faucibus maecenas, pellentesque nec himenaeos nulla. Egestas sed pellentesque semper adipiscing netus arcu ut euismod. Aenean consequat quam posuere magna erat tortor mi phasellus? Finibus augue pretium tempus tempus leo mi; gravida congue lobortis."
 format:
   lumo-html: 
-    logo: "/assets/logos/uhm_logo.png"                             # Optional. Path to a logo displayed above the title
-    github-repo: "https://github.com/olesonlab/cea"        # Optional. Adds a github corner at the top right
-    primary-color: "black"
+    logo: "/assets/logos/uhm_logo.png"       
+    # github-repo: "https://github.com/olesonlab/cea"        
     self-contained: true
-    is-particlejs-enabled: true                  # Optional: display interactive particles in the document header
-author: Alemarie Ceria
+    is-particlejs-enabled: false
+    toc-title: "Contents"
+author: 
+  - name: Louis Chua
+  - name: Ela Ural
+  - name: Alemarie Ceria
+  - name: Kirsten Oleson
 date: last-modified
 ---
-This is a Quarto website. The following is an example of how you can format it.
 
-## Dependencies
+## What is Natural Capital Accounting (NCA)?
 
-```{r}
-#| label: example-code-chunk
-#| code-fold: true
-#| code-summary: Example of a folded code chunk
-source(here::here("functions", "install_packages_and_load_libraries.R")) # <1>
-```
+- A useful tool in measuring changes in stock and condition of natural capital
+- ‘Accounts for’ the value of ecosystem services
 
-1. Sources in function `install_packages_and_load_libraries()` which uses the
-`pacman` and `renv` packages to keep track of our dependencies
+## What's the Value in Valuing Nature?
 
-## Data
+Having baseline measures for the value of our ecosystems allows us to: 
 
-We will use the `mtcars` dataset as an example:
+- Form a more comprehensive calculation of GDP
+- Have better information for use in cost-benefit analyses 
+    - For example: What is the value of this fishery conservation policy? Will 
+    the gains from fees on fishing justify the cost of the policy? 
+- Creates data on natural resource flow for other sorts of analyses 
 
-```{r}
-#| label: glimpse-at-mtcars
-#| collapse: true
-glimpse(mtcars)
-```
+## Compiling Coastal Ecosystem Accounts (CEA) for Hawaii
 
-```{r}
-#| label: summarize-mtcars
-#| collapse: true
-summary(mtcars)
-```
+Globally, despite being critical for food security, the economy, and protection 
+from disasters, coasts face multiple threats, such as development, pollution, 
+and over harvest. Hawaii is no exception. Coasts are threatened by sediment from 
+former plantations, groundwater discharge laden with nutrients and pathogens, 
+coastal development and hardening, and over use, to name a few. The resulting 
+loss of valuable ecosystems and their services undermines human well-being and 
+sustainability. We need a way to represent the importance of nature for the 
+economy and human activity, so we make informed decisions and avoid unintended 
+trade-offs. That is why we are compiling coastal ecosystem accounts for the state.
 
-::: {.panel-tabset .nav-pills}
+## Working Under the United Nation's (UN) System of Environmental Economic Accounting (SEEA-EA) Framework
 
-### Table
+- The UN has an existing platform
+- Their statistical framework is standardized and familiar to policy-makers
+- There are existing guidance and recommendations
+- Tracks at relevant ecological spatial scales, changes in ecosystem extent, 
+conditions, services, and asset value over time
 
-```{r}
-#| label: mtcars-table
-#| code-fold: true
-#| code-summary: Create a quick table
-gt(head(mtcars)) # <1>
-```
+## Accounting Spatial Unit: Main Hawaiian Islands (MHI)
 
-1. Print the first 6 rows of the `mtcars` data set using `head()` function and 
-create a table using the `{gt}` R package
+The MHI is some of the most isolated islands on Earth. It has a resident 
+population of approximately 1.4 million, 1 million of whom live on the island of 
+Oahu (in Honolulu city and county). It also hosts over 10 million tourists a year 
+(pre-COVID). Coastal ecosystems underpin tourism, provide food, and are sites for 
+reflection and recreation. These ecosystems are critical to the economy, culture, 
+and human well-being.
 
-### Plot
-
-```{r}
-#| label: mtcars-plot
-#| code-fold: true
-#| code-summary: Create a quick histogram plot
-#| fig-align: center
-ggplot(mtcars, aes(mpg)) +
-  geom_histogram()
-```
-
+:::{.callout}
+Our goal is to build accounts that span two periods, prior to and after the 
+catastrophic coral reef bleaching event of 2014-2015
 :::
 
-## Additional Section
+## Accounting Units: Moku and Ecosystem Types (ET)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Ecosystem accounts are reported in a consistent spatial unit, which we define as 
+the moku, a traditional Hawaiian resource management unit that roughly follows 
+watershed boundaries. By extending from mountain out to the ocean, moku have the 
+advantages of tying the land to the sea, and they resonate with managers and the 
+public. 
 
-## Additional Section
+Marine ET's are defined by the benthic zone. Our ET's include soft bottom, other 
+hard bottom, pavement, and coral dominated soft bottom. Anything outside of these 
+are defined as open ocean. Terrestrial ET's include developed, grass/shrub, tree 
+cover, estuarine wetlands, barren, cropland, pasture, beaches/dunes, and 
+freshwater wetlands.
 
-### Subsection
+## Extent Accounts
 
-Lorem ipsum odor amet, consectetuer adipiscing elit. Varius mus vitae euismod vehicula montes natoque turpis. Venenatis nisi primis orci felis cursus sem himenaeos metus hendrerit. Suspendisse himenaeos congue metus a aptent pharetra ligula praesent. In per eget diam tristique sodales adipiscing. Est at nisl faucibus pulvinar per nunc at malesuada! Platea magna suspendisse egestas lacinia faucibus taciti donec id.
+### Marine
 
-### Additional Subsection
+Marine extent comes from HIMARC, a data collaborative led by Mary Donovan. Marine 
+data layers represent the output of a spatially predictive model, and are based 
+on data from the period 2004-2014. Ecologists are using these maps as the 
+“pre-bleaching” extent.
 
-Sapien platea vel, faucibus vel rhoncus ligula platea. Ut curae enim ridiculus sapien finibus? Amet ac taciti faucibus congue quisque orci pharetra. Ad nullam tortor dis consectetur interdum penatibus. Tempor justo taciti fames dapibus sodales fusce in class proin. Class inceptos nec enim libero aliquam lobortis tempor erat platea.
+### Terrestrial
 
-## Resources
+## Conditions Accounts
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+### Marine 
+
+### Terrestrial
+
+## Services Accounts
+
+### Fisheries
+
+#### Physical Flow
+
+*Marine Landings*
+
+```{r, eval=FALSE, include=FALSE}
+# Quantified in commercial and non-commercial fish landings
+# 
+# - Commercial data comes from the Hawai`i Department of Land and Resources (DLNR)'s 
+# Division of Aquatic Resources (DAR) Commercial Marine Landings (CML) reportings 
+#   - Fish Species Over Ecosystem Type (FSOET) Dataset
+#     - Allocate physical flow in spatial terms over our ET's by assigning the 
+#     probability of each species group to have been extracted from a particular 
+#     ET
+#     - Probabilities are based off of:
+#       - Understanding of habitat: How long does a species spend in a particular 
+#       ET?
+#       - Migration knowledge: Where is a species known to travel to?
+#       - Local fishing knowledge: In which habitat is the species best known to be 
+#       caught? 
+#     - We use FSOET’s ET probabilities to derive a distribution of catch for each 
+#     species group over each ET
+#   - Species groups include Deep 7 bottomfish, shallow bottomfish, pelagics, and
+#   reef-associated
+#   - Landings by DAR catch area
+#   
+# - Non-commercial data comes from the Marine Recreational Information Program 
+# (MRIP)'s Hawai`i Marine Recreational Fishing Survey (HMRFS) 
+#   - Focusing on reef herbivores, including kala (bluespine unicornfish), kole 
+#   (goldring surgeonfish), manini (convict tang), spectacled parrotfish, redlip 
+#   parrotfish, and uhu (all other parrotfish species)
+#   - Landings by island
+```
+
+#### Monetary Flow
+
+*Exchange Value (EV)*
+
+```{r, eval=FALSE, include=FALSE}
+# :::{.callout}
+# SEEA-EA framework's definition of Exchange Value (EV): 
+# 
+# "[T]hose values that reflect the price at which ecosystem services and ecosystem 
+# assets would be exchanged between buyer and seller if a market existed."
+# 
+# - United Nations (2017) 
+# :::
+# 
+# ::: {.cell .page-columns .page-full .column-screen .grey-section}
+# For commercial fish, we calculate net revenue. Making use of market prices is 
+# "most preferred" method to estimate EV under SEEA-EA. Our valuation is suitable
+# for a Net Present Value (NPV) approach (United Nations et al. 2014)
+# 
+# $$
+# EV_{t} = \textit{landings} \times \textit{price} - \textit{Marginal Costs}_{t}
+# $$
+# :::
+# 
+# - For non-commercial fish, we assume that the value of fish caught to consume
+# non-commercially is equivalent, by this "if a market existed" language, to that 
+# commercial value
+```
+
+*Revenue*
+
+## Benefit

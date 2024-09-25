@@ -6,22 +6,19 @@ project:
     browser: true
 
 website:
-  title: "<b>CEA</b>"
+  title: "CEA"
   back-to-top-navigation: true
   search: true
   navbar: 
     background: white
     search: true
     left:
-      - text: "Home"
+      - text: "About"
         href: index.qmd
-      - text: "Extents and Conditions"
-        menu:
-          - storymap.qmd
-          - dashboard.qmd
-      - text: "Services"
-        menu:
-          - fisheries.qmd
+      - text: "Story Map"
+        href: storymap.qmd
+      - text: "Dashboard"
+        href: dashboard.qmd
   # page-footer: |
   #   ![](/assets/logos/uhm-logo.png){width=30%}
   #   <br><br>

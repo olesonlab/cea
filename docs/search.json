@@ -1,24 +1,31 @@
 [
   {
+    "objectID": "storymap.html",
+    "href": "storymap.html",
+    "title": "Story Map",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Coastal Ecosystem Accounting in the Main Hawaiian Islands",
     "section": "",
-    "text": "This is a Quarto website. The following is an example of how you can format it."
+    "text": "A useful tool in measuring changes in stock and condition of natural capital\n‘Accounts for’ the value of ecosystem services"
   },
   {
     "objectID": "index.html#dependencies",
     "href": "index.html#dependencies",
     "title": "Coastal Ecosystem Accounting in the Main Hawaiian Islands",
     "section": "Dependencies",
-    "text": "Dependencies\n\n\nExample of a folded code chunk\n1source(here::here(\"functions\", \"install_packages_and_load_libraries.R\"))\n\n\n\n1\n\nSources in function install_packages_and_load_libraries() which uses the pacman and renv packages to keep track of our dependencies"
+    "text": "Dependencies\n\n\nExample of a folded code chunk\nsource(\n  here::here(\"scripts\", \"functions\", \"install_packages_and_load_libraries.R\")\n1)\n\n\n\n1\n\nSources in function install_packages_and_load_libraries() which uses the pacman and renv packages to keep track of our dependencies"
   },
   {
     "objectID": "index.html#data",
     "href": "index.html#data",
     "title": "Coastal Ecosystem Accounting in the Main Hawaiian Islands",
     "section": "Data",
-    "text": "Data\nWe will use the mtcars dataset as an example:\n\n\nCode\nglimpse(mtcars)\n## Rows: 32\n## Columns: 11\n## $ mpg  &lt;dbl&gt; 21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4, 22.8, 19.2, 17.8,…\n## $ cyl  &lt;dbl&gt; 6, 6, 4, 6, 8, 6, 8, 4, 4, 6, 6, 8, 8, 8, 8, 8, 8, 4, 4, 4, 4, 8,…\n## $ disp &lt;dbl&gt; 160.0, 160.0, 108.0, 258.0, 360.0, 225.0, 360.0, 146.7, 140.8, 16…\n## $ hp   &lt;dbl&gt; 110, 110, 93, 110, 175, 105, 245, 62, 95, 123, 123, 180, 180, 180…\n## $ drat &lt;dbl&gt; 3.90, 3.90, 3.85, 3.08, 3.15, 2.76, 3.21, 3.69, 3.92, 3.92, 3.92,…\n## $ wt   &lt;dbl&gt; 2.620, 2.875, 2.320, 3.215, 3.440, 3.460, 3.570, 3.190, 3.150, 3.…\n## $ qsec &lt;dbl&gt; 16.46, 17.02, 18.61, 19.44, 17.02, 20.22, 15.84, 20.00, 22.90, 18…\n## $ vs   &lt;dbl&gt; 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,…\n## $ am   &lt;dbl&gt; 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0,…\n## $ gear &lt;dbl&gt; 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 3, 3,…\n## $ carb &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, 1, 1, 2,…\n\n\n\n\nCode\nsummary(mtcars)\n##       mpg             cyl             disp             hp       \n##  Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n##  1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n##  Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n##  Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n##  3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n##  Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n##       drat             wt             qsec             vs        \n##  Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n##  1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n##  Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n##  Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n##  3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n##  Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n##        am              gear            carb      \n##  Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n##  1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n##  Median :0.0000   Median :4.000   Median :2.000  \n##  Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n##  3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n##  Max.   :1.0000   Max.   :5.000   Max.   :8.000\n\n\n\nTablePlot\n\n\n\n\nCreate a quick table\n1gt(head(mtcars))\n\n\n\n1\n\nPrint the first 6 rows of the mtcars data set using head() function and create a table using the {gt} R package\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\n21.0\n6\n160\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\n21.0\n6\n160\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\n22.8\n4\n108\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\n21.4\n6\n258\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\n18.7\n8\n360\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\n18.1\n6\n225\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1\n\n\n\n\n\n\n\n\n\n\n\nCreate a quick histogram plot\nggplot(mtcars, aes(mpg)) +\n  geom_histogram()"
+    "text": "Data\nWe will use the mtcars dataset as an example:\n\n\nCode\nglimpse(mtcars)\n## Rows: 32\n## Columns: 11\n## $ mpg  &lt;dbl&gt; 21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4, 22.8, 19.2, 17.8,…\n## $ cyl  &lt;dbl&gt; 6, 6, 4, 6, 8, 6, 8, 4, 4, 6, 6, 8, 8, 8, 8, 8, 8, 4, 4, 4, 4, 8,…\n## $ disp &lt;dbl&gt; 160.0, 160.0, 108.0, 258.0, 360.0, 225.0, 360.0, 146.7, 140.8, 16…\n## $ hp   &lt;dbl&gt; 110, 110, 93, 110, 175, 105, 245, 62, 95, 123, 123, 180, 180, 180…\n## $ drat &lt;dbl&gt; 3.90, 3.90, 3.85, 3.08, 3.15, 2.76, 3.21, 3.69, 3.92, 3.92, 3.92,…\n## $ wt   &lt;dbl&gt; 2.620, 2.875, 2.320, 3.215, 3.440, 3.460, 3.570, 3.190, 3.150, 3.…\n## $ qsec &lt;dbl&gt; 16.46, 17.02, 18.61, 19.44, 17.02, 20.22, 15.84, 20.00, 22.90, 18…\n## $ vs   &lt;dbl&gt; 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,…\n## $ am   &lt;dbl&gt; 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0,…\n## $ gear &lt;dbl&gt; 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 3, 3,…\n## $ carb &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, 1, 1, 2,…\n\n\n\n\nCode\nsummary(mtcars)\n##       mpg             cyl             disp             hp       \n##  Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n##  1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n##  Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n##  Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n##  3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n##  Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n##       drat             wt             qsec             vs        \n##  Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n##  1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n##  Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n##  Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n##  3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n##  Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n##        am              gear            carb      \n##  Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n##  1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n##  Median :0.0000   Median :4.000   Median :2.000  \n##  Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n##  3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n##  Max.   :1.0000   Max.   :5.000   Max.   :8.000\n\n\n\nTablePlot\n\n\n\n\nCreate a quick table\n1gt(head(mtcars))\n\n\n\n1\n\nPrint the first 6 rows of the mtcars data set using head() function and create a table using the {gt} R package\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\n21.0\n6\n160\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\n21.0\n6\n160\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\n22.8\n4\n108\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\n21.4\n6\n258\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\n18.7\n8\n360\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\n18.1\n6\n225\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1\n\n\n\n\n\n\n\n\n\n\n\n\nCreate a quick histogram plot\nggplot(mtcars, aes(mpg)) +\n  geom_histogram()"
   },
   {
     "objectID": "index.html#additional-section",
@@ -42,23 +49,233 @@
     "text": "Resources\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
-    "objectID": "extents.html",
-    "href": "extents.html",
+    "objectID": "cea.html#introduction",
+    "href": "cea.html#introduction",
+    "title": "Lumo: a clean Quarto template",
+    "section": "Introduction",
+    "text": "Introduction\nQuarto is probably my favorite tool in the R/Python universe. Transforming your code and thoughts into a stunning report in one click always blows my mind.\nWhile the default Quarto appearance looks great, there are a few tweaks I always apply to elevate the report even further. Rather than manually adding them each time, I bundled everything into a custom format called lumo.\n\n\nBtw, you can learn how to master Quarto thanks to my online course: Productive R Workflow\nThis document aims at showcasing how a quarto document made with the lumo format looks like."
+  },
+  {
+    "objectID": "cea.html#load-packages",
+    "href": "cea.html#load-packages",
+    "title": "Lumo: a clean Quarto template",
+    "section": "Load Packages",
+    "text": "Load Packages\nMake sure to load all your packages at the start of your document for clarity and consistency.\nNotice that the code chunks are folded by default. You can adjust this behavior with the code-fold option in the document’s YAML header.\n\n\nCode\nlibrary(tidyverse) \n1library(hrbrthemes)\n2library(viridis)\nlibrary(ggiraph)\nlibrary(patchwork) \nlibrary(sf)\n\n\n\n1\n\nthis package provides my favorite ggplot2 theme: theme_ipsum()\n\n2\n\nbecause I was too lazy to find something better in the R Color Finder!\n\n\n\n\n\n\n\n\n\n\nBy the way, you should open the code chunk that is folded above. ⬆️ There is a little stunning surprise on its right hand side."
+  },
+  {
+    "objectID": "cea.html#main-features",
+    "href": "cea.html#main-features",
+    "title": "Lumo: a clean Quarto template",
+    "section": "Main Features",
+    "text": "Main Features\n\nTypography\nYou may have noticed the typography differs from the default Quarto style. I’ve also added extra spacing above each title for better readability, and underlined them to make the headings stand out more.\n\n\nHeader & Footer\nThe header is fully customized, complete with a fun GitHub corner linking to the original code. Plus, there are animated particles for a touch of whimsy. Scroll down, and you’ll find a custom footer as well.\n\nFor a complete list of features, visit the documentation!\nOh and since we’re here, did you know you can easily include a full width interactive map with leaflet in a quarto doc? 😍\n\n\nCode\n# Load the library.\nlibrary(leaflet)\n\n# Make a map\nleaflet() %&gt;%\n  addTiles() %&gt;% # Add default OpenStreetMap map tiles\n  addMarkers(lng = 174.768, lat = -36.852, popup = \"The birthplace of R\")"
+  },
+  {
+    "objectID": "cea.html#how-it-works",
+    "href": "cea.html#how-it-works",
+    "title": "Lumo: a clean Quarto template",
+    "section": "How It Works",
+    "text": "How It Works\nLumo is a Quarto custom format. With a single command, you can add an _extension folder to your working directory, containing all the styles and content needed to create a report like this.\nIt takes less than 28 seconds, and you can find all the details here.\n\nBy the way, did you know you can link graphs together using ggiraph? Its syntax is quite similar to ggplot2 and it produces stunning, interactive outputs. Try hovering over one of the charts below!\nPretty close to magic, isn’t it?\n\n\nCode\n# Read the full world map\nworld_sf &lt;- read_sf(\"https://raw.githubusercontent.com/holtzy/R-graph-gallery/master/DATA/world.geojson\")\nworld_sf &lt;- world_sf %&gt;%\n  filter(!name %in% c(\"Antarctica\", \"Greenland\"))\n\n# Create a sample dataset\nhappiness_data &lt;- data.frame(\n  Country = c(\n    \"France\", \"Germany\", \"United Kingdom\",\n    \"Japan\", \"China\", \"Vietnam\",\n    \"United States of America\", \"Canada\", \"Mexico\"\n  ),\n  Continent = c(\n    \"Europe\", \"Europe\", \"Europe\",\n    \"Asia\", \"Asia\", \"Asia\",\n    \"North America\", \"North America\", \"North America\"\n  ),\n  Happiness_Score = rnorm(mean = 30, sd = 20, n = 9),\n  GDP_per_capita = rnorm(mean = 30, sd = 20, n = 9),\n  Social_support = rnorm(mean = 30, sd = 20, n = 9),\n  Healthy_life_expectancy = rnorm(mean = 30, sd = 20, n = 9)\n)\n\n# Join the happiness data with the full world map\nworld_sf &lt;- world_sf %&gt;%\n  left_join(happiness_data, by = c(\"name\" = \"Country\"))\n\n\n# Create the first chart (Scatter plot)\np1 &lt;- ggplot(world_sf, aes(\n  GDP_per_capita,\n  Happiness_Score,\n  tooltip = name,\n  data_id = Continent,\n  color = Continent\n)) +\n  geom_point_interactive(data = filter(world_sf, !is.na(Happiness_Score)), size = 4) +\n  theme_minimal() +\n  theme(\n    axis.title.x = element_blank(),\n    axis.title.y = element_blank(),\n    legend.position = \"none\"\n  )\n\n# Create the second chart (Bar plot)\np2 &lt;- ggplot(world_sf, aes(\n  x = reorder(name, Happiness_Score),\n  y = Happiness_Score,\n  tooltip = name,\n  data_id = Continent,\n  fill = Continent\n)) +\n  geom_col_interactive(data = filter(world_sf, !is.na(Happiness_Score))) +\n  coord_flip() +\n  theme_minimal() +\n  theme(\n    axis.title.x = element_blank(),\n    axis.title.y = element_blank(),\n    legend.position = \"none\"\n  )\n\n# Create the third chart (choropleth)\np3 &lt;- ggplot() +\n  geom_sf(data = world_sf, fill = \"lightgrey\", color = \"lightgrey\") +\n  geom_sf_interactive(\n    data = filter(world_sf, !is.na(Happiness_Score)),\n    aes(fill = Continent, tooltip = name, data_id = Continent)\n  ) +\n  coord_sf(crs = st_crs(3857)) +\n  theme_void() +\n  theme(\n    axis.title.x = element_blank(),\n    axis.title.y = element_blank(),\n    legend.position = \"none\"\n  )\n\n# Combine the plots\ncombined_plot &lt;- (p1 + p2) / p3 + plot_layout(heights = c(1, 2))\n\n# Create the interactive plot\ninteractive_plot &lt;- girafe(ggobj = combined_plot)\ninteractive_plot &lt;- girafe_options(\n  interactive_plot,\n  opts_hover(css = \"fill:red;stroke:black;\")\n)\n\ninteractive_plot"
+  },
+  {
+    "objectID": "cea.html#interactive-table",
+    "href": "cea.html#interactive-table",
+    "title": "Lumo: a clean Quarto template",
+    "section": "Interactive table",
+    "text": "Interactive table\nIt is very easy to insert an interactive table in your document thanks to the DT package. The output allows to filter rows, search for something and sort using a specific columns!\nInstall the library with install.packages(\"DT\"). Then, just pass a dataframe to the datatable() function to get a stunning interactive output!\n\n\nCode\nlibrary(DT)\ndata(iris)\n\n# Make a table\ndatatable(iris, filter = \"top\")\n\n\n\n\n I’ve added a bit of CSS to make the font smaller on DT tables by the way 🙂"
+  },
+  {
+    "objectID": "cea.html#a-grey-section",
+    "href": "cea.html#a-grey-section",
+    "title": "Lumo: a clean Quarto template",
+    "section": "A grey section",
+    "text": "A grey section\n\nIt’s always good to have a grey section. Makes the document breath a bit. I’ve added a little utility class in Lumo to make sure you can make sections like this very easily. Check the documentation!\nLet’s use this space to render a little equation:\n\\[\nx = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n\\]"
+  },
+  {
+    "objectID": "cea.html#quarto-tricks",
+    "href": "cea.html#quarto-tricks",
+    "title": "Lumo: a clean Quarto template",
+    "section": "Quarto Tricks",
+    "text": "Quarto Tricks\nLumo is a great format, but to get the most out of it, you’ll need to master a few Quarto tricks!\nThe good news? I’ve compiled my 30+ favorite tips in one place. Just spend 30 minutes, and you’ll be up to speed with all of them!\n\nFor example, if you’re creating multiple plots, each highlighting different aspects of your dataset, consider using pills to organize them!\n\nScatterplotBoxplotJittering\n\n\nThis is a good old scatterplot of the iris dataset. If you want to learn more about how to make graphs in R, visit my R graph gallery!\n\n\nCode\nggplot(iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) + \n    geom_point() +\n    theme_ipsum()\n\n\n\n\nYou can also make a boxplot, but please do not hide the underlying distribution! This is widely explain in my data-to-viz.com project in case you’re not convinced 😋. Check the next tab to get convinced!\n\n\nCode\n# create a dataset\ndata &lt;- data.frame(\n  name=c( rep(\"A\",500), rep(\"B\",500), rep(\"B\",500), rep(\"C\",20), rep('D', 100)  ),\n  value=c( rnorm(500, 10, 5), rnorm(500, 13, 1), rnorm(500, 18, 1), rnorm(20, 25, 4), rnorm(100, 12, 1) )\n)\n\n# Plot\ndata %&gt;%\n  ggplot( aes(x=name, y=value, fill=name)) +\n    geom_boxplot() +\n    scale_fill_viridis(discrete = TRUE, alpha=0.6) +\n    theme_ipsum() +\n    theme(\n      legend.position=\"none\",\n      plot.title = element_text(size=11)\n    ) +\n    ggtitle(\"A boxplot that hides the underlying distribution\") +\n    xlab(\"\")\n\n\n\n\nSee what’s happening now that the individual data points are visible! Would be a shame to miss this.\n\n\nCode\ndata %&gt;%\n  ggplot( aes(x=name, y=value, fill=name)) +\n    geom_boxplot() +\n    scale_fill_viridis(discrete = TRUE, alpha=0.6) +\n    geom_jitter(color=\"black\", size=0.4, alpha=0.9) +\n    theme_ipsum() +\n    theme(\n      legend.position=\"none\",\n      plot.title = element_text(size=11)\n    ) +\n    ggtitle(\"A boxplot with jitter\") +\n    xlab(\"\")"
+  },
+  {
+    "objectID": "cea.html#more-information",
+    "href": "cea.html#more-information",
+    "title": "Lumo: a clean Quarto template",
+    "section": "More Information",
+    "text": "More Information\nLearn how to use and how to customize Lumo here."
+  },
+  {
+    "objectID": "cea.html#session-info",
+    "href": "cea.html#session-info",
+    "title": "Lumo: a clean Quarto template",
+    "section": "Session Info",
+    "text": "Session Info\nWhen creating a Quarto document, it’s a good practice to include details about your working environment.\nThis is easy to do—just call sessionInfo(), and it will print out all your R and package versions. This simple step greatly enhances reproducibility.\n\nSession Information\n\n\n\n\n\nCode\nsessionInfo()"
+  },
+  {
+    "objectID": "index.html#what-is-natural-capital-accounting-nca",
+    "href": "index.html#what-is-natural-capital-accounting-nca",
+    "title": "Coastal Ecosystem Accounting in the Main Hawaiian Islands",
+    "section": "",
+    "text": "A useful tool in measuring changes in stock and condition of natural capital\n‘Accounts for’ the value of ecosystem services"
+  },
+  {
+    "objectID": "index.html#whats-the-value-in-valuing-nature",
+    "href": "index.html#whats-the-value-in-valuing-nature",
+    "title": "Coastal Ecosystem Accounting in the Main Hawaiian Islands",
+    "section": "What’s the Value in Valuing Nature?",
+    "text": "What’s the Value in Valuing Nature?\nHaving baseline measures for the value of our ecosystems allows us to:\n\nForm a more comprehensive calculation of GDP\nHave better information for use in cost-benefit analyses\n\nFor example: What is the value of this fishery conservation policy? Will the gains from fees on fishing justify the cost of the policy?\n\nCreates data on natural resource flow for other sorts of analyses"
+  },
+  {
+    "objectID": "index.html#compiling-coastal-ecosystem-accounts-cea-for-hawaii",
+    "href": "index.html#compiling-coastal-ecosystem-accounts-cea-for-hawaii",
+    "title": "Coastal Ecosystem Accounting in the Main Hawaiian Islands",
+    "section": "Compiling Coastal Ecosystem Accounts (CEA) for Hawaii",
+    "text": "Compiling Coastal Ecosystem Accounts (CEA) for Hawaii\nGlobally, despite being critical for food security, the economy, and protection from disasters, coasts face multiple threats, such as development, pollution, and over harvest. Hawaii is no exception. Coasts are threatened by sediment from former plantations, groundwater discharge laden with nutrients and pathogens, coastal development and hardening, and over use, to name a few. The resulting loss of valuable ecosystems and their services undermines human well-being and sustainability. We need a way to represent the importance of nature for the economy and human activity, so we make informed decisions and avoid unintended trade-offs. That is why we are compiling coastal ecosystem accounts for the state."
+  },
+  {
+    "objectID": "index.html#working-under-the-united-nations-un-system-of-environmental-economic-accounting-seea-ea-framework",
+    "href": "index.html#working-under-the-united-nations-un-system-of-environmental-economic-accounting-seea-ea-framework",
+    "title": "Coastal Ecosystem Accounting in the Main Hawaiian Islands",
+    "section": "Working Under the United Nation’s (UN) System of Environmental Economic Accounting (SEEA-EA) Framework",
+    "text": "Working Under the United Nation’s (UN) System of Environmental Economic Accounting (SEEA-EA) Framework\n\nThe UN has an existing platform\nTheir statistical framework is standardized and familiar to policy-makers\nThere are existing guidance and recommendations\nTracks at relevant ecological spatial scales, changes in ecosystem extent, conditions, services, and asset value over time"
+  },
+  {
+    "objectID": "index.html#ecosystem-accounting",
+    "href": "index.html#ecosystem-accounting",
+    "title": "Coastal Ecosystem Accounting in the Main Hawaiian Islands",
+    "section": "Ecosystem Accounting",
+    "text": "Ecosystem Accounting\n\nArea: Main Hawaiian Islands (MHI)\nThe MHI is some of the most isolated islands on Earth. It has a resident population of approximately 1.4 million, 1 million of whom live on the island of Oahu (in Honolulu city and county). It also hosts over 10 million tourists a year (pre-COVID). Coastal ecosystems underpin tourism, provide food, and are sites for reflection and recreation. These ecosystems are critical to the economy, culture, and human well-being.\nOur goal is to build accounts that span two periods, prior to and after the catastrophic coral reef bleaching event of 2014-2015.\n\n\nAccounting Units: Moku\n\n\nExtent Accounts\n\nMarine\n\n\nTerrestrial\n\n\n\nConditions Accounts\n\nMarine\n\n\nTerrestrial\n\n\n\nServices Accounts\n\n\nFisheries\n\n\nBenefit"
+  },
+  {
+    "objectID": "index.html#ecosystem-accounting-spatial-unit-main-hawaiian-islands-mhi",
+    "href": "index.html#ecosystem-accounting-spatial-unit-main-hawaiian-islands-mhi",
+    "title": "Coastal Ecosystem Accounting in the Main Hawaiian Islands",
+    "section": "Ecosystem Accounting Spatial Unit: Main Hawaiian Islands (MHI)",
+    "text": "Ecosystem Accounting Spatial Unit: Main Hawaiian Islands (MHI)\nThe MHI is some of the most isolated islands on Earth. It has a resident population of approximately 1.4 million, 1 million of whom live on the island of Oahu (in Honolulu city and county). It also hosts over 10 million tourists a year (pre-COVID). Coastal ecosystems underpin tourism, provide food, and are sites for reflection and recreation. These ecosystems are critical to the economy, culture, and human well-being.\n\n\n\n\n\n\nOur goal is to build accounts that span two periods, prior to and after the catastrophic coral reef bleaching event of 2014-2015"
+  },
+  {
+    "objectID": "index.html#ecosystem-accounting-units-moku-and-ecosystem-types-et",
+    "href": "index.html#ecosystem-accounting-units-moku-and-ecosystem-types-et",
+    "title": "Coastal Ecosystem Accounting in the Main Hawaiian Islands",
+    "section": "Ecosystem Accounting Units: Moku and Ecosystem Types (ET)",
+    "text": "Ecosystem Accounting Units: Moku and Ecosystem Types (ET)\nEcosystem accounts are reported in a consistent spatial unit, which we define as the moku, a traditional Hawaiian resource management unit that roughly follows watershed boundaries. By extending from mountain out to the ocean, moku have the advantages of tying the land to the sea, and they resonate with managers and the public."
+  },
+  {
+    "objectID": "index.html#extent-accounts",
+    "href": "index.html#extent-accounts",
+    "title": "Coastal Ecosystem Accounting in the Main Hawaiian Islands",
+    "section": "Extent Accounts",
+    "text": "Extent Accounts\n\nMarine\nMarine extent comes from HIMARC, a data collaborative led by Mary Donovan. Marine data layers represent the output of a spatially predictive model, and are based on data from the period 2004-2014. Ecologists are using these maps as the “pre-bleaching” extent.\n\n\nTerrestrial"
+  },
+  {
+    "objectID": "index.html#conditions-accounts",
+    "href": "index.html#conditions-accounts",
+    "title": "Coastal Ecosystem Accounting in the Main Hawaiian Islands",
+    "section": "Conditions Accounts",
+    "text": "Conditions Accounts\n\nMarine\n\n\nTerrestrial"
+  },
+  {
+    "objectID": "index.html#services-accounts",
+    "href": "index.html#services-accounts",
+    "title": "Coastal Ecosystem Accounting in the Main Hawaiian Islands",
+    "section": "Services Accounts",
+    "text": "Services Accounts\n\nFisheries\n\nPhysical Flow\nMarine Landings\n\n\nMonetary Flow\nExchange Value (EV)\nRevenue"
+  },
+  {
+    "objectID": "index.html#benefit",
+    "href": "index.html#benefit",
+    "title": "Coastal Ecosystem Accounting in the Main Hawaiian Islands",
+    "section": "Benefit",
+    "text": "Benefit"
+  },
+  {
+    "objectID": "index.html#accounting-spatial-unit-main-hawaiian-islands-mhi",
+    "href": "index.html#accounting-spatial-unit-main-hawaiian-islands-mhi",
+    "title": "Coastal Ecosystem Accounting in the Main Hawaiian Islands",
+    "section": "Accounting Spatial Unit: Main Hawaiian Islands (MHI)",
+    "text": "Accounting Spatial Unit: Main Hawaiian Islands (MHI)\nThe MHI is some of the most isolated islands on Earth. It has a resident population of approximately 1.4 million, 1 million of whom live on the island of Oahu (in Honolulu city and county). It also hosts over 10 million tourists a year (pre-COVID). Coastal ecosystems underpin tourism, provide food, and are sites for reflection and recreation. These ecosystems are critical to the economy, culture, and human well-being.\n\n\n\n\n\n\nOur goal is to build accounts that span two periods, prior to and after the catastrophic coral reef bleaching event of 2014-2015"
+  },
+  {
+    "objectID": "index.html#accounting-units-moku-and-ecosystem-types-et",
+    "href": "index.html#accounting-units-moku-and-ecosystem-types-et",
+    "title": "Coastal Ecosystem Accounting in the Main Hawaiian Islands",
+    "section": "Accounting Units: Moku and Ecosystem Types (ET)",
+    "text": "Accounting Units: Moku and Ecosystem Types (ET)\nEcosystem accounts are reported in a consistent spatial unit, which we define as the moku, a traditional Hawaiian resource management unit that roughly follows watershed boundaries. By extending from mountain out to the ocean, moku have the advantages of tying the land to the sea, and they resonate with managers and the public.\nMarine ET’s are defined by the benthic zone. Our ET’s include soft bottom, other hard bottom, pavement, and coral dominated soft bottom. Anything outside of these are defined as open ocean. Terrestrial ET’s include developed, grass/shrub, tree cover, estuarine wetlands, barren, cropland, pasture, beaches/dunes, and freshwater wetlands."
+  },
+  {
+    "objectID": "storymap.html#what-is-natural-capital-accounting-nca",
+    "href": "storymap.html#what-is-natural-capital-accounting-nca",
     "title": "Story Map",
     "section": "",
-    "text": "Back to top"
+    "text": "A useful tool in measuring changes in stock and condition of natural capital\n‘Accounts for’ the value of ecosystem services"
   },
   {
-    "objectID": "conditions.html",
-    "href": "conditions.html",
+    "objectID": "storymap.html#whats-the-value-in-valuing-nature",
+    "href": "storymap.html#whats-the-value-in-valuing-nature",
+    "title": "Story Map",
+    "section": "What’s the Value in Valuing Nature?",
+    "text": "What’s the Value in Valuing Nature?\nHaving baseline measures for the value of our ecosystems allows us to:\n\nForm a more comprehensive calculation of GDP\nHave better information for use in cost-benefit analyses\n\nFor example: What is the value of this fishery conservation policy? Will the gains from fees on fishing justify the cost of the policy?\n\nCreates data on natural resource flow for other sorts of analyses"
+  },
+  {
+    "objectID": "storymap.html#compiling-coastal-ecosystem-accounts-cea-for-hawaii",
+    "href": "storymap.html#compiling-coastal-ecosystem-accounts-cea-for-hawaii",
+    "title": "Story Map",
+    "section": "Compiling Coastal Ecosystem Accounts (CEA) for Hawaii",
+    "text": "Compiling Coastal Ecosystem Accounts (CEA) for Hawaii\nGlobally, despite being critical for food security, the economy, and protection from disasters, coasts face multiple threats, such as development, pollution, and over harvest. Hawaii is no exception. Coasts are threatened by sediment from former plantations, groundwater discharge laden with nutrients and pathogens, coastal development and hardening, and over use, to name a few. The resulting loss of valuable ecosystems and their services undermines human well-being and sustainability. We need a way to represent the importance of nature for the economy and human activity, so we make informed decisions and avoid unintended trade-offs. That is why we are compiling coastal ecosystem accounts for the state."
+  },
+  {
+    "objectID": "storymap.html#working-under-the-united-nations-un-system-of-environmental-economic-accounting-seea-ea-framework",
+    "href": "storymap.html#working-under-the-united-nations-un-system-of-environmental-economic-accounting-seea-ea-framework",
+    "title": "Story Map",
+    "section": "Working Under the United Nation’s (UN) System of Environmental Economic Accounting (SEEA-EA) Framework",
+    "text": "Working Under the United Nation’s (UN) System of Environmental Economic Accounting (SEEA-EA) Framework\n\nThe UN has an existing platform\nTheir statistical framework is standardized and familiar to policy-makers\nThere are existing guidance and recommendations\nTracks at relevant ecological spatial scales, changes in ecosystem extent, conditions, services, and asset value over time"
+  },
+  {
+    "objectID": "storymap.html#accounting-spatial-unit-main-hawaiian-islands-mhi",
+    "href": "storymap.html#accounting-spatial-unit-main-hawaiian-islands-mhi",
+    "title": "Story Map",
+    "section": "Accounting Spatial Unit: Main Hawaiian Islands (MHI)",
+    "text": "Accounting Spatial Unit: Main Hawaiian Islands (MHI)\nThe MHI is some of the most isolated islands on Earth. It has a resident population of approximately 1.4 million, 1 million of whom live on the island of Oahu (in Honolulu city and county). It also hosts over 10 million tourists a year (pre-COVID). Coastal ecosystems underpin tourism, provide food, and are sites for reflection and recreation. These ecosystems are critical to the economy, culture, and human well-being.\n\n\n\n\n\n\nOur goal is to build accounts that span two periods, prior to and after the catastrophic coral reef bleaching event of 2014-2015"
+  },
+  {
+    "objectID": "storymap.html#accounting-units-moku-and-ecosystem-types-et",
+    "href": "storymap.html#accounting-units-moku-and-ecosystem-types-et",
+    "title": "Story Map",
+    "section": "Accounting Units: Moku and Ecosystem Types (ET)",
+    "text": "Accounting Units: Moku and Ecosystem Types (ET)\nEcosystem accounts are reported in a consistent spatial unit, which we define as the moku, a traditional Hawaiian resource management unit that roughly follows watershed boundaries. By extending from mountain out to the ocean, moku have the advantages of tying the land to the sea, and they resonate with managers and the public.\nMarine ET’s are defined by the benthic zone. Our ET’s include soft bottom, other hard bottom, pavement, and coral dominated soft bottom. Anything outside of these are defined as open ocean. Terrestrial ET’s include developed, grass/shrub, tree cover, estuarine wetlands, barren, cropland, pasture, beaches/dunes, and freshwater wetlands."
+  },
+  {
+    "objectID": "storymap.html#extent-accounts",
+    "href": "storymap.html#extent-accounts",
+    "title": "Story Map",
+    "section": "Extent Accounts",
+    "text": "Extent Accounts\n\nMarine\nMarine extent comes from HIMARC, a data collaborative led by Mary Donovan. Marine data layers represent the output of a spatially predictive model, and are based on data from the period 2004-2014. Ecologists are using these maps as the “pre-bleaching” extent.\n\n\nTerrestrial"
+  },
+  {
+    "objectID": "storymap.html#conditions-accounts",
+    "href": "storymap.html#conditions-accounts",
+    "title": "Story Map",
+    "section": "Conditions Accounts",
+    "text": "Conditions Accounts\n\nMarine\n\n\nTerrestrial"
+  },
+  {
+    "objectID": "storymap.html#services-accounts",
+    "href": "storymap.html#services-accounts",
+    "title": "Story Map",
+    "section": "Services Accounts",
+    "text": "Services Accounts\n\nFisheries\n\nPhysical Flow\nMarine Landings\n\n\nMonetary Flow\nExchange Value (EV)\nRevenue"
+  },
+  {
+    "objectID": "storymap.html#benefit",
+    "href": "storymap.html#benefit",
+    "title": "Story Map",
+    "section": "Benefit",
+    "text": "Benefit"
+  },
+  {
+    "objectID": "dashboard.html",
+    "href": "dashboard.html",
     "title": "Dashboard",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "services.html",
-    "href": "services.html",
-    "title": "Fisheries",
     "section": "",
     "text": "Back to top"
   }
